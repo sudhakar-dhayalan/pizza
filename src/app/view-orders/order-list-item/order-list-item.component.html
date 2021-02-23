@@ -1,1 +1,16 @@
-<p>order-list-item works!</p>
+<a 
+    class="list-group-item col-xs-12"
+    > 
+    <!-- <h4>{{orderItem.customerName}}</h4> -->
+
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">{{orderItem.customerName}}</h4>
+        <p class="list-group-item-text">{{orderItem.noOfItems}}</p>
+        <p class="list-group-item-text">{{orderItem.totalAmount}}</p>
+        <p class="list-group-item-text">{{orderItem.statusOfOrder}}</p>
+    </div>
+
+    <span class="pull-right">
+        <p>text</p>
+    </span>
+</a>
