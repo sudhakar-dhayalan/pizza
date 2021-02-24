@@ -1,9 +1,8 @@
-<a 
+<li
     class="list-group-item col-xs-12 grey-shade"
     > 
     <!-- <h4>{{orderItem.customerName}}</h4> -->
 
-    <div class="pull-left">
         <h4 class="list-group-item-heading">{{orderItem.customerName}}</h4>
         <p class="list-group-item-text">{{orderItem.noOfItems}}</p>
         <p class="list-group-item-text">{{orderItem.totalAmount}}</p>
@@ -14,5 +13,5 @@
         [disabled]="orderItem.statusOfOrder === 'Ready to serve'">Change Order Status</button>
         &nbsp;&nbsp;
         <button class="btn btn-secondary" (click)="showOrderDetails()">View Details</button>
-    </div>
-</a>
+   
+</li>

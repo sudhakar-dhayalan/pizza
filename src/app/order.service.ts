@@ -16,10 +16,6 @@ export class OrderService {
     }
 
     getOrderByOrderId(ordId: number): Order {
-        // let size = this.orders.length;
-        // if(ordId <= size) 
-            return this.orders[--ordId];
-        // else
-        //     return this.orders[size-1];
+        return this.orders[--ordId];
     }
 }
