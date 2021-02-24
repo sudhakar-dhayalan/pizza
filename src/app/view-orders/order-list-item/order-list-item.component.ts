@@ -28,6 +28,6 @@ export class OrderListItemComponent implements OnInit {
   }
 
   showOrderDetails() {
-    this.router.navigate(["/view-orders", "order-details", this.orderItem.customerName]);
+    this.router.navigate(["/view-orders", "order-details", this.orderItem.orderId]);
   }
 }
