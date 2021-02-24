@@ -1,2 +1,41 @@
-<p>order-details works!</p>
-<p>Customer Name: {{order?.customerName}}</p>
+<div> 
+    <div class="row">
+        <div class="col-xs-3 col-md-5">Customer Name</div>
+        <div class="col-xs-9 col-md-7">{{order?.customerName}}</div>
+      </div><br>
+      
+      <div class="row">
+        <div class="col-xs-6 col-md-5">Items Details</div>
+                <div class="col-xs-6 col-md-7">
+                    <ol 
+                    *ngFor="let orderDetail of order?.orderDetails;"
+                    style="margin-left: 0; padding-left: 0;">
+                        <li class="list-group">
+                            <p>Item Name: {{orderDetail?.itemName}}</p>
+                            <p>Price per item : {{orderDetail?.price}}</p>
+                            <p>No. Of items: {{orderDetail?.noOfItems}}</p>
+                        </li>
+                    </ol>
+                </div>
+      </div><br>
+      
+      <div class="row">
+        <div class="col-xs-6 col-md-5">Total Price</div>
+        <div class="col-xs-6 col-md-7">{{order?.totalAmount}}</div>
+      </div><br>
+      
+      <div class="row">
+        <div class="col-xs-6 col-md-5">Delivery Address</div>
+        <div class="col-xs-6 col-md-7">
+            <p>
+                No. {{order?.deliveryAddress.doorNo}}, 
+                {{order?.deliveryAddress.street}}, 
+                {{order?.deliveryAddress.area}},
+                {{order?.deliveryAddress.district}},
+                {{order?.deliveryAddress.state}},
+                {{order?.deliveryAddress.pincode}},
+                {{order?.deliveryAddress.country}}
+            </p>
+        </div>
+      </div>
+</div>

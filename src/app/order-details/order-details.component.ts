@@ -20,6 +20,7 @@ export class OrderDetailsComponent implements OnInit {
     this.order = this.orderService.getOrderByOrderId(id);
     if(!this.order)
       this.router.navigate(["/page-not-found"]);
+    console.log(this.order);
   }
 
 }
