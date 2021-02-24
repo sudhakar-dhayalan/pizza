@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StatusOfOrder } from 'src/app/order-status.enum';
 import { Order } from 'src/app/order.model';
 
@@ -9,8 +10,10 @@ import { Order } from 'src/app/order.model';
 })
 export class OrderListItemComponent implements OnInit {
 
+  orderdetails = "order-details";
+
   @Input("orderItem") orderItem: Order;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -24,4 +27,7 @@ export class OrderListItemComponent implements OnInit {
     this.orderItem.statusOfOrder = StatusOfOrder[nextKey];
   }
 
+  showOrderDetails() {
+    this.router.navigate(["/view-orders", "order-details", this.orderItem.customerName]);
+  }
 }

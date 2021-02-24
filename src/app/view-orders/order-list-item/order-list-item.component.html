@@ -12,5 +12,7 @@
         class="btn btn-outline-secondary custom-btn-style" 
         (click)="changeOrderStatus()"
         [disabled]="orderItem.statusOfOrder === 'Ready to serve'">Change Order Status</button>
+        &nbsp;&nbsp;
+        <button class="btn btn-secondary" (click)="showOrderDetails()">View Details</button>
     </div>
 </a>
