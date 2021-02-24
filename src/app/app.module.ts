@@ -8,6 +8,7 @@ import { OrderComponent } from './order/order.component';
 import { ViewOrdersComponent } from './view-orders/view-orders.component';
 import { OrderService } from './order.service';
 import { OrderListItemComponent } from './view-orders/order-list-item/order-list-item.component';
+import { OrderDetailsComponent } from './order-details/order-details.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { OrderListItemComponent } from './view-orders/order-list-item/order-list
     NavbarComponent,
     OrderComponent,
     ViewOrdersComponent,
-    OrderListItemComponent
+    OrderListItemComponent,
+    OrderDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@
         <p class="list-group-item-text">{{orderItem.totalAmount}}</p>
         <p class="list-group-item-text">{{orderItem.statusOfOrder}}</p>
         <button 
-        class="btn btn-outline-secondary green-color" 
+        class="btn btn-outline-secondary custom-btn-style" 
         (click)="changeOrderStatus()"
         [disabled]="orderItem.statusOfOrder === 'Ready to serve'">Change Order Status</button>
     </div>
