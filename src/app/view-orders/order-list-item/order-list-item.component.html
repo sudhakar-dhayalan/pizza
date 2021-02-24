@@ -1,17 +1,13 @@
-<li
-    class="list-group-item col-xs-12 grey-shade"
-    > 
-    <!-- <h4>{{orderItem.customerName}}</h4> -->
+<li class="list-group-item col-xs-12 grey-shade">
 
-        <h4 class="list-group-item-heading">{{orderItem.customerName}}</h4>
-        <p class="list-group-item-text">{{orderItem.totalNoOfItems}}</p>
-        <p class="list-group-item-text">{{orderItem.totalAmount}}</p>
-        <p class="list-group-item-text">{{orderItem.statusOfOrder}}</p>
-        <button 
-        class="btn btn-outline-secondary custom-btn-style" 
-        (click)="changeOrderStatus()"
-        [disabled]="orderItem.statusOfOrder === 'Ready to serve'">Change Order Status</button>
-        &nbsp;&nbsp;
+    <h4 class="list-group-item-heading">Customer Name : {{orderItem.customerName |firstLetterUp}}</h4> <br>
+
+    <div class="list-group" style="margin-left: 20rem; margin-right: 25rem; ">
+        <p class="list-group-item-text">Total number of items ordered : {{orderItem.totalNoOfItems}}</p>
+        <p class="list-group-item-text">Total amount : {{orderItem.totalAmount}}</p>
+        <p class="list-group-item-text">Order status : {{orderItem.statusOfOrder}}</p>
+        <button class="btn btn-outline-secondary custom-btn-style" (click)="changeOrderStatus()" [disabled]="orderItem.statusOfOrder === 'Ready to serve'">Change Order Status</button> &nbsp;&nbsp;
         <button class="btn btn-secondary" (click)="showOrderDetails()">View Details</button>
-   
+    </div>
+
 </li>

@@ -5,12 +5,14 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OrderService } from './order.service';
+import { FirstLetterUpPipe } from './common/first-letter-up.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    routingComponents
+    routingComponents,
+    FirstLetterUpPipe
   ],
   imports: [
     BrowserModule,
