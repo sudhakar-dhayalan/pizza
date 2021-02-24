@@ -1,0 +1,12 @@
+.pointer-cursor {
+    cursor: pointer;
+}
+
+.grey-shade:hover {
+    /* background-color: #eff7e1; */
+    background-color:#f4f9f9;
+}
+
+.green-color {
+    color: purple;
+}

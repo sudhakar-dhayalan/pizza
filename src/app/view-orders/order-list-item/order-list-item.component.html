@@ -1,5 +1,5 @@
 <a 
-    class="list-group-item col-xs-12"
+    class="list-group-item col-xs-12 pointer-cursor grey-shade"
     > 
     <!-- <h4>{{orderItem.customerName}}</h4> -->
 
@@ -8,9 +8,9 @@
         <p class="list-group-item-text">{{orderItem.noOfItems}}</p>
         <p class="list-group-item-text">{{orderItem.totalAmount}}</p>
         <p class="list-group-item-text">{{orderItem.statusOfOrder}}</p>
+        <button 
+        class="btn btn-outline-secondary green-color" 
+        (click)="changeOrderStatus()"
+        [disabled]="orderItem.statusOfOrder === 'Ready to serve'">Change Order Status</button>
     </div>
-
-    <span class="pull-right">
-        <p>text</p>
-    </span>
 </a>
