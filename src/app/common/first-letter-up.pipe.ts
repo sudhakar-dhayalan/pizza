@@ -6,7 +6,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FirstLetterUpPipe implements PipeTransform {
 
   transform(value: string, ...args: unknown[]): string {
-    return value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+    let arr = value.split(" ");
+    value = "";
+    arr.map((str: string)=> {
+      value += str.charAt(0).toUpperCase() + str.slice(1).toLowerCase() + " ";
+    });
+    return value;
   }
 
 }

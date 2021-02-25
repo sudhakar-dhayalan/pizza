@@ -12,7 +12,7 @@ export class OrderService {
         
         new Order(
             ++this.id, 
-            "sudhakar", 
+            "sudhakar dhayalan", 
             10, 
             100, 
             StatusOfOrder.OrderRecieved,
@@ -32,7 +32,7 @@ export class OrderService {
         ),
         new Order(
             ++this.id, 
-            "someone", 
+            "someone someone", 
             20, 
             200, 
             StatusOfOrder.OrderRecieved,
