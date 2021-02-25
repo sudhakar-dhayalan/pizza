@@ -13,40 +13,40 @@ export class OrderService {
         new Order(
             ++this.id, 
             "sudhakar dhayalan", 
-            10, 
-            100, 
+            2, 
+            300, 
             StatusOfOrder.OrderRecieved,
             [
               new OrderDetails("veg pizza", 100, 1),
               new OrderDetails("chicken pizza", 200, 1)
             ],
             new DeliveryAddress(
-              "73", 
-              "Big Street", 
-              "Marudampakkam", 
-              "Ranipet",
-              "TamilNadu",
-              632405,
+              "123", 
+              "Some Street", 
+              "KR Puram", 
+              "KR Puram",
+              "Karnataka",
+              533005,
               "India"
             )
         ),
         new Order(
             ++this.id, 
             "someone someone", 
-            20, 
-            200, 
+            2, 
+            350, 
             StatusOfOrder.OrderRecieved,
             [
               new OrderDetails("veg pizza", 100, 1),
-              new OrderDetails("chicken pizza", 200, 1)
+              new OrderDetails("chicken pizza", 250, 1)
             ],
             new DeliveryAddress(
-              "234", 
-              "2nd cross", 
-              "HRBR", 
-              "Kalyanagar",
+              "98", 
+              "10th cross", 
+              "Marathalli", 
+              "Whitefield",
               "Karnataka",
-              632408,
+              630908,
               "India"
             )
         ),

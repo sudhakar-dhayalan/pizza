@@ -1,10 +1,11 @@
-<div class="col-xs-12">
-    <app-order-list-item 
-    *ngFor="let order of orders" 
-    [orderItem]="order"></app-order-list-item>
+<div class="row">
+
+    <app-order-list-item class="col-md-12" *ngFor="let order of orders" [orderItem]="order"></app-order-list-item>
+
 </div>
 
-<br>
+<br><br>
 
-<button class="btn btn-success" routerLink="/order">Place New Order</button>
-
+<div class="row">
+    <button class="col-md-12 btn btn-success" routerLink="/order">Place New Order</button>
+</div>

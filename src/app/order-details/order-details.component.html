@@ -1,34 +1,39 @@
-<div>
-    <div class="row">
-        <div class="col-xs-3 col-md-5 bold">Customer Name</div>
-        <div class="col-xs-9 col-md-7">{{order?.customerName |firstLetterUp}}</div>
-    </div><br>
+<div class="blue-shade-bg">
+    <br>
+    <div class="offset-md-1 col-md-10">
+        <h3><u>Order Details:</u></h3> <br>
+        <div class="row">
+            <div class="col-xs-3 col-md-5 bold">Customer Name</div>
+            <div class="col-xs-9 col-md-7">{{order?.customerName |firstLetterUp}}</div>
+        </div><br>
 
-    <div class="row">
-        <div class="col-xs-6 col-md-5 bold">Items Details</div>
-        <div class="col-xs-6 col-md-7">
-            <ol *ngFor="let orderDetail of order?.orderDetails;" style="margin-left: 0; padding-left: 0;">
-                <li class="list-group">
-                    <p>Item Name: {{orderDetail?.itemName |firstLetterUp}}</p>
-                    <p>Price per item : Rs.{{orderDetail?.price}}</p>
-                    <p>No. Of items: {{orderDetail?.noOfItems}}</p>
-                </li>
-            </ol>
-        </div>
-    </div><br>
+        <div class="row">
+            <div class="col-xs-6 col-md-5 bold">Items Details</div>
+            <div class="col-xs-6 col-md-7">
+                <ol *ngFor="let orderDetail of order?.orderDetails;" style="margin-left: 0; padding-left: 0;">
+                    <li class="list-group">
+                        <p>Item Name: {{orderDetail?.itemName |firstLetterUp}}</p>
+                        <p>Price per item : Rs.{{orderDetail?.price}}</p>
+                        <p>No. Of items: {{orderDetail?.noOfItems}}</p>
+                    </li>
+                </ol>
+            </div>
+        </div><br>
 
-    <div class="row">
-        <div class="col-xs-6 col-md-5 bold">Total Price</div>
-        <div class="col-xs-6 col-md-7">Rs.{{order?.totalAmount}}</div>
-    </div><br>
+        <div class="row">
+            <div class="col-xs-6 col-md-5 bold">Total Price</div>
+            <div class="col-xs-6 col-md-7">Rs.{{order?.totalAmount}}</div>
+        </div><br>
 
-    <div class="row">
-        <div class="col-xs-6 col-md-5 bold">Delivery Address</div>
-        <div class="col-xs-6 col-md-7">
-            <p>
-                No. {{order?.deliveryAddress.doorNo |firstLetterUp}}, {{order?.deliveryAddress.street |firstLetterUp}}, {{order?.deliveryAddress.area |firstLetterUp}}, {{order?.deliveryAddress.district |firstLetterUp}}, {{order?.deliveryAddress.state |firstLetterUp}},
-                {{order?.deliveryAddress.pincode}}, {{order?.deliveryAddress.country |firstLetterUp}}
-            </p>
+        <div class="row">
+            <div class="col-xs-6 col-md-5 bold">Delivery Address</div>
+            <div class="col-xs-6 col-md-7">
+                <p>
+                    No. {{order?.deliveryAddress.doorNo |firstLetterUp}}, {{order?.deliveryAddress.street |firstLetterUp}}, {{order?.deliveryAddress.area |firstLetterUp}}, {{order?.deliveryAddress.district |firstLetterUp}}, {{order?.deliveryAddress.state |firstLetterUp}},
+                    {{order?.deliveryAddress.pincode}}, {{order?.deliveryAddress.country |firstLetterUp}}
+                </p>
+            </div>
         </div>
     </div>
+    <br>
 </div>
