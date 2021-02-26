@@ -7,7 +7,7 @@ import { OrderListItemComponent } from './view-orders/order-list-item/order-list
 import { ViewOrdersComponent } from './view-orders/view-orders.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/view-orders', pathMatch: 'full' },
+  { path: '', redirectTo: 'view-orders', pathMatch: 'full' },
   { path: 'view-orders/order-details/:id', component: OrderDetailsComponent },
   { path: 'view-orders', component: ViewOrdersComponent },
   { path: 'order', component: OrderComponent },
