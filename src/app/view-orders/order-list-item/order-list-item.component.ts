@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { StatusOfOrder } from 'src/app/order-status.enum';
 import { Order } from 'src/app/order.model';
+import { OrderService } from 'src/app/order.service';
 
 @Component({
   selector: 'app-order-list-item',
@@ -13,7 +14,8 @@ export class OrderListItemComponent implements OnInit {
   orderdetails = "order-details";
 
   @Input("orderItem") orderItem: Order;
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private orderService: OrderService) { }
 
   ngOnInit(): void {
   }
@@ -28,6 +30,11 @@ export class OrderListItemComponent implements OnInit {
   }
 
   showOrderDetails() {
+    // let id = this.orderService.isOrderIdPresent(this.orderItem.orderId);
+    // if(!id)
+    //   this.router.navigate(["/page-not-found"]);
+
     this.router.navigate(["/view-orders", "order-details", this.orderItem.orderId]);
   }
+  
 }

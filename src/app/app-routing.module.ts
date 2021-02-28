@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'view-orders', component: ViewOrdersComponent },
   { path: 'order', component: OrderComponent },
   { path: 'page-not-found', component: PageNotFoundComponent},
-  { path: '**', redirectTo: '/view-orders' }
+  { path: '**', redirectTo: 'view-orders' }
 ];
 
 @NgModule({
